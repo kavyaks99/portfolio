@@ -1,0 +1,29 @@
+.navbar {
+  @apply absolute top-0 left-0  py-5 justify-between flex-row flex font-bold w-[100%];
+  .selected {
+    @apply border-b-2;
+  }
+  .navbar_left_container {
+    @apply flex gap-10  items-center px-52 flex-row;
+    .item {
+      @apply flex items-center gap-10 cursor-pointer;
+      list-style: none;
+    }
+    .name {
+      @apply text-[20px];
+    }
+  }
+  .navbar_right_container {
+    @apply flex gap-7  items-center px-10 flex-row pr-20;
+
+    .email {
+      @apply bg-white text-black rounded-[25px] p-3 font-semibold flex gap-3 items-center cursor-pointer;
+    }
+    .copy_icon {
+      @apply text-gray-500;
+    }
+    .resume_btn {
+      @apply pl-5 pr-5 pt-3 pb-3 border-white border-[1px] rounded-3xl font-bold;
+    }
+  }
+}

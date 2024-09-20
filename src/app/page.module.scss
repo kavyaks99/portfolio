@@ -1,0 +1,136 @@
+.main_container {
+  @apply pt-[200px];
+  .parent {
+    @apply flex flex-col items-center font-bold gap-0 w-[100%];
+    .header {
+      @apply sticky flex flex-col items-center top-[58px];
+    }
+  }
+  .heading_container {
+    gap: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .heading {
+    @apply p-0 text-[150px] m-0 tracking-tighter;
+    position: relative;
+    overflow: hidden;
+    line-height: 0.8;
+  }
+  .sub_heading {
+    @apply flex flex-row  items-center justify-around w-[800px] pt-6 text-[16px];
+  }
+  .profile_container {
+    @apply pt-28 pb-60;
+    z-index: 2;
+    .profile {
+      @apply rounded-[35px] object-cover h-[650px] w-[500px];
+      position: relative;
+    }
+  }
+  .des_container {
+    @apply flex flex-col gap-20;
+  }
+  .description {
+    @apply text-[65px] flex justify-center w-[1000px] items-center pt-[20px] text-center tracking-tighter;
+    line-height: 1;
+  }
+  .work_img_container {
+    @apply pt-28 pb-52;
+    .work_img {
+      @apply rounded-[35px] object-cover h-[650px] w-[500px];
+    }
+  }
+  .work_container {
+    @apply flex flex-col  gap-24  w-[1300px] flex-wrap;
+    .work_heading {
+      @apply w-[850px];
+    }
+    .work {
+      @apply text-[65px] tracking-tighter font-bold;
+      line-height: 1;
+    }
+    .card_container {
+      @apply flex  gap-14;
+      flex-wrap: wrap;
+      .card {
+        @apply w-[380px] flex flex-col gap-2;
+        .slno {
+          @apply font-bold tracking-widest;
+        }
+        .title {
+          @apply font-bold text-[40px];
+        }
+        .work_description {
+          @apply text-neutral-400 text-[20px] font-medium;
+        }
+      }
+    }
+  }
+  .exp_header {
+    @apply w-[1400px] flex flex-col justify-center items-center pt-60;
+    .experience_container {
+      gap: 0;
+      position: relative;
+      overflow: hidden;
+      @apply w-[900px] font-bold;
+      .experience {
+        @apply p-0 text-[140px] m-0 tracking-tighter;
+        position: relative;
+        overflow: hidden;
+        line-height: 0.8;
+      }
+    }
+  }
+  .exp_list {
+    @apply flex justify-center items-center flex-col;
+    .exp_card {
+      @apply flex flex-col gap-3 w-[800px];
+      .title {
+        @apply font-bold text-[40px];
+      }
+      .position {
+        @apply text-[16px] uppercase font-bold text-neutral-300;
+      }
+      .description_exp {
+        @apply text-neutral-300 border-b-[1px] border-neutral-600 text-[16px] pb-6;
+      }
+    }
+  }
+  .button_container {
+    @apply flex justify-center items-center w-[1200px] gap-8 pb-28;
+
+    .resume_btn {
+      @apply pl-5 pr-5 pt-3 pb-3 border-white border-[1px] rounded-3xl font-bold;
+    }
+  }
+  .footer {
+    @apply pt-24;
+    .name {
+      @apply text-[20px] font-bold;
+    }
+    .designation {
+      @apply text-[18px] text-neutral-400 font-bold pt-2 w-[350px];
+    }
+    @apply bg-black flex justify-center items-center;
+    .email_div {
+      @apply pt-10 cursor-pointer;
+      .email {
+        @apply bg-white text-black rounded-[25px] p-3 font-semibold flex gap-3 items-center w-[250px];
+      }
+      .copy_icon {
+        @apply text-gray-500;
+      }
+    }
+    .footer_note {
+      @apply text-[22px] font-bold;
+    }
+    .selected_projects {
+      @apply text-[16px] text-neutral-400 font-bold pb-6 pt-20;
+    }
+    .projects {
+      @apply flex flex-col gap-2 font-bold;
+    }
+  }
+}
