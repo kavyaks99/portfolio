@@ -10,6 +10,12 @@ function Navbar() {
     navigator.clipboard.writeText("kskavya3661@gmail.com");
   };
 
+  const handleNavigate = () => {
+    window.open(
+      "https://drive.google.com/file/d/1yM8TkjnOez_YGBFrs60XdTqgKIXR8AT_/view?usp=sharing",
+      "_blank"
+    );
+  };
   return (
     <>
       <div className={styles.navbar}>
@@ -33,7 +39,14 @@ function Navbar() {
           </li>
         </ul>
         <ul className={styles.navbar_right_container}>
-          <li className={styles.item}>LET'S CONNECT</li>
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className={styles.resume_btn}
+            onClick={() => handleNavigate()}
+          >
+            VIEW RESUME
+          </motion.button>
           <motion.li
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
@@ -42,13 +55,6 @@ function Navbar() {
           >
             kskavya3661@gmail.com <MdContentCopy className={styles.copy_icon} />
           </motion.li>
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className={styles.resume_btn}
-          >
-            VIEW RESUME
-          </motion.button>
         </ul>
       </div>
       <ToastContainer />

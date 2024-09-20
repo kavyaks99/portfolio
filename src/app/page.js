@@ -12,9 +12,9 @@ import {
   useViewportScroll,
 } from "framer-motion";
 import styles from "./page.module.scss";
-import profile from "../assets/images/profile_kavya.jpg";
+import profile from "../assets/images/profile1.jpg";
 import avatar from "../assets/images/3d1.png";
-
+import profileAvatar from "../assets/images/3d3.png";
 import workplace from "../assets/images/workplace.png";
 import { useEffect, useRef } from "react";
 import { MdContentCopy } from "react-icons/md";
@@ -146,40 +146,24 @@ export default function Home() {
 
   const experienceList = [
     {
-      position: "Senior UX Designer",
-      company: "Crosby",
+      position: "Senior Developer",
+      company: "QBurst",
       duration: "2021 – Present",
       description: [
-        "Spearheaded the design and strategy of Crosby's retail POS system, delivering an intuitive and efficient tool for both mobile and in-store platforms.",
-      ],
-    },
-    {
-      position: "Senior UX Designer",
-      company: "Crosby",
-      duration: "2021 – Present",
-      description: [
-        "Led the user research efforts to identify pain points in the existing retail POS, resulting in actionable insights that shaped the design decisions.",
-      ],
-    },
-    {
-      position: "Senior UX Designer",
-      company: "Crosby",
-      duration: "2021 – Present",
-      description: [
-        "Worked closely with retail partners to gather feedback, driving continuous improvements to the POS tool’s usability and performance.",
-      ],
-    },
-    {
-      position: "Senior UX Designer",
-      company: "Crosby",
-      duration: "2021 – Present",
-      description: [
-        "Introduced an adaptive design approach that ensures the POS interface works seamlessly across different screen sizes and resolutions.",
-        "Streamlined the training experience for new users of the POS system by simplifying the onboarding process.",
+        "Led the design and development of user-friendly, responsive interfaces, focusing on secure integration. Specialized in building fast, scalable web applications. Used modern tools like React and Next.js, along with Redux, to create smooth and efficient user experiences.",
       ],
     },
   ];
 
+  const handleNavigate = () => {
+    window.open(
+      "https://drive.google.com/file/d/1yM8TkjnOez_YGBFrs60XdTqgKIXR8AT_/view?usp=sharing",
+      "_blank"
+    );
+  };
+  const handleCopy = () => {
+    navigator.clipboard.writeText("kskavya3661@gmail.com");
+  };
   return (
     <div className={styles.main_container}>
       <Navbar />
@@ -366,6 +350,7 @@ export default function Home() {
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
             className={styles.resume_btn}
+            onClick={() => handleNavigate()}
           >
             VIEW RESUME
           </motion.button>
@@ -378,7 +363,7 @@ export default function Home() {
             <p className={styles.designation}>
               Senior Developer, currently crafting experiences at QBurst.
             </p>
-            <Image src={avatar} height={500} width={500} />
+            <Image src={avatar} height={350} width={350} />
           </div>
           <div>
             <p className={styles.footer_note}>
@@ -389,6 +374,7 @@ export default function Home() {
               className={styles.email_div}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
+              onClick={() => handleCopy()}
             >
               <div className={styles.email}>
                 kskavya3661@gmail.com

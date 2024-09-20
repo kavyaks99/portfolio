@@ -84,7 +84,7 @@
     }
   }
   .exp_list {
-    @apply flex justify-center items-center flex-col;
+    @apply flex justify-center items-center flex-col pt-10;
     .exp_card {
       @apply flex flex-col gap-3 w-[800px];
       .title {
@@ -94,19 +94,19 @@
         @apply text-[16px] uppercase font-bold text-neutral-300;
       }
       .description_exp {
-        @apply text-neutral-300 border-b-[1px] border-neutral-600 text-[16px] pb-6;
+        @apply text-neutral-300 border-b-[1px] border-neutral-600 text-[18px] pb-6;
       }
     }
   }
   .button_container {
-    @apply flex justify-center items-center w-[1200px] gap-8 pb-28;
+    @apply flex justify-center items-center w-[1200px] gap-8 pb-20;
 
     .resume_btn {
       @apply pl-5 pr-5 pt-3 pb-3 border-white border-[1px] rounded-3xl font-bold;
     }
   }
   .footer {
-    @apply pt-24;
+    @apply pt-16;
     .name {
       @apply text-[20px] font-bold;
     }
@@ -115,7 +115,7 @@
     }
     @apply bg-black flex justify-center items-center;
     .email_div {
-      @apply pt-10 cursor-pointer;
+      @apply pt-6 cursor-pointer;
       .email {
         @apply bg-white text-black rounded-[25px] p-3 font-semibold flex gap-3 items-center w-[250px];
       }
@@ -124,10 +124,10 @@
       }
     }
     .footer_note {
-      @apply text-[22px] font-bold;
+      @apply text-[28px] font-bold;
     }
     .selected_projects {
-      @apply text-[16px] text-neutral-400 font-bold pb-6 pt-20;
+      @apply text-[16px] text-neutral-400 font-bold pb-6 pt-14;
     }
     .projects {
       @apply flex flex-col gap-2 font-bold;
