@@ -263,40 +263,32 @@ export default function Home() {
           />
         </motion.div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div className={styles.work_container}>
-          <div className={styles.work_heading}>
-            <motion.p
-              className={styles.work}
-              initial="hidden"
-              variants={workTitle}
-              whileInView="visible"
-            >
-              My reliable development methodology
-            </motion.p>
-          </div>
-          <motion.div
-            className={styles.card_container}
+      <div className={styles.work_container}>
+        <div className={styles.work_heading}>
+          <motion.p
+            className={styles.work}
             initial="hidden"
-            viewport={{ once: true }}
             variants={workTitle}
             whileInView="visible"
           >
-            {cardData.map((work) => (
-              <div className={styles.card}>
-                <p className={styles.slno}>{work.number}</p>
-                <p className={styles.title}> {work.title}</p>
-                <p className={styles.work_description}>{work.description}</p>
-              </div>
-            ))}
-          </motion.div>
+            My reliable development methodology
+          </motion.p>
         </div>
+        <motion.div
+          className={styles.card_container}
+          initial="hidden"
+          viewport={{ once: true }}
+          variants={workTitle}
+          whileInView="visible"
+        >
+          {cardData.map((work) => (
+            <div className={styles.card}>
+              <p className={styles.slno}>{work.number}</p>
+              <p className={styles.title}> {work.title}</p>
+              <p className={styles.work_description}>{work.description}</p>
+            </div>
+          ))}
+        </motion.div>
       </div>
       <div
         style={{

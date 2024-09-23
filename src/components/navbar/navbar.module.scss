@@ -1,5 +1,5 @@
 .navbar {
-  @apply absolute top-0 left-0  py-5 justify-around flex-row flex font-bold w-[100%] pl-4;
+  @apply absolute top-0 left-0  py-5 justify-around flex-row flex font-bold w-[100%] pl-5;
   .selected {
     @apply border-b-2;
   }
