@@ -1,7 +1,7 @@
 .main_container {
   @apply pt-[200px];
   .parent {
-    @apply flex flex-col items-center font-bold gap-0 w-[100%];
+    @apply flex flex-col items-center font-bold gap-0;
     .header {
       @apply sticky flex flex-col items-center top-[58px];
     }

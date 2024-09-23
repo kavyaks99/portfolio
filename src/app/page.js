@@ -12,7 +12,7 @@ import {
   useViewportScroll,
 } from "framer-motion";
 import styles from "./page.module.scss";
-import profile from "../assets/images/profile1.jpg";
+import profile from "../assets/images/profile2.jpg";
 import avatar from "../assets/images/3d1.png";
 import profileAvatar from "../assets/images/3d3.png";
 import workplace from "../assets/images/workplace.png";

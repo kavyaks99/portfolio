@@ -20,7 +20,7 @@ function Navbar() {
     <>
       <div className={styles.navbar}>
         <ul className={styles.navbar_left_container}>
-          <li className={styles.name}>KAVYA K S</li>
+          <li>KAVYA K S</li>
           <li
             className={`${styles.item} ${
               selected === "ABOUT" ? styles.selected : ""
@@ -57,7 +57,6 @@ function Navbar() {
           </motion.li>
         </ul>
       </div>
-      <ToastContainer />
     </>
   );
 }
