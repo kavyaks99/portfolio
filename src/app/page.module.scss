@@ -55,25 +55,25 @@
       line-height: 1;
     }
     .card_container {
-      @apply flex justify-start min-w-[200px] xl:w-[1400px] lg:w-[900px] md:w-[900px] sm:w-[800px] gap-20 xl:gap-14;
+      @apply flex justify-start min-w-[200px] xl:w-[1400px] lg:w-[900px] md:w-auto sm:w-[800px] gap-20 xl:gap-14;
       flex-wrap: wrap;
 
       .card {
         @apply w-[100%] xl:w-[380px] flex flex-col xl:gap-2 gap-4;
         .slno {
-          @apply font-bold tracking-widest text-[36px] xl:text-[16px];
+          @apply font-bold tracking-widest text-[36px] xl:text-[16px] lg:text-[18px] md:text-[18px] sm:text-[18px];
         }
         .title {
           @apply font-bold text-[55px] xl:text-[40px] lg:text-[32px] md:text-[28px] sm:text-[24px];
         }
         .work_description {
-          @apply text-neutral-400 text-[48px] xl:text-[20px] lg:text-[18px] md:text-[17px] sm:text-[16px]  font-medium;
+          @apply text-neutral-400 text-[48px] xl:text-[20px] lg:text-[18px] md:text-[18px] sm:text-[18px]  font-medium;
         }
       }
     }
   }
   .exp {
-    @apply flex flex-col gap-36 pl-[30px];
+    @apply flex flex-col gap-36 pl-[30px] md:pl-[30px];
     .exp_header {
       @apply flex flex-col justify-center pt-60 w-full;
       .experience_container {
@@ -93,7 +93,7 @@
     .exp_list {
       @apply flex justify-center flex-col pt-10;
       .exp_card {
-        @apply flex flex-col gap-3 w-[800px];
+        @apply flex flex-col gap-3 w-[800px] xl:w-[800px] md:w-auto;
         .details {
           @apply flex xl:justify-between flex-col xl:flex-row;
         }
@@ -113,7 +113,7 @@
     @apply flex pb-20;
 
     .resume_btn {
-      @apply xl:pl-5 xl:pr-5 xl:pt-3 xl:pb-3 pl-10 pr-10 pt-6 pb-6 xl:border-white border-[1px]  border-white border-[2px] xl:rounded-3xl rounded-full font-semibold  text-[45px] xl:text-[16px];
+      @apply xl:pl-5 xl:pr-5 xl:pt-3 xl:pb-3 md:pl-3 md:pr-3 md:pt-2 md:pb-2 pl-10 pr-10 pt-6 pb-6 xl:border-white border-[1px]  border-white border-[2px] xl:rounded-3xl rounded-full font-semibold  text-[45px] xl:text-[16px] lg:text-[17px] md:text-[16px] sm:text-[15px];
     }
   }
   .footer {
@@ -128,16 +128,16 @@
       @apply order-1 xl:order-2;
     }
     .name {
-      @apply xl:text-[20px] text-[38px] font-bold;
+      @apply xl:text-[20px] md:text-[20px] lg:text-[20px] sm:text-[20px] text-[38px] font-bold;
     }
     .designation {
-      @apply xl:text-[18px] text-[36px] text-neutral-400 font-bold pt-2 xl:w-[350px] w-[550px];
+      @apply xl:text-[18px] md:text-[20px] lg:text-[20px] sm:text-[20px] text-[36px] text-neutral-400 font-bold pt-2 xl:w-[350px] w-[550px];
     }
     @apply bg-black flex justify-center items-center;
     .email_div {
       @apply pt-6 cursor-pointer;
       .email {
-        @apply bg-white text-black xl:rounded-[25px] rounded-full xl:p-3 p-4 font-semibold flex gap-3 items-center xl:w-[250px]  w-[550px] text-[36px] xl:text-[16px];
+        @apply bg-white text-black xl:rounded-[25px] rounded-full xl:p-3 p-4 font-semibold flex gap-3 items-center xl:w-[250px] md:w-[250px] lg:w-[250px] sm:w-[250px]  w-[550px] text-[36px] xl:text-[16px] md:text-[15px] lg:text-[15px] sm:text-[15px];
       }
       .copy_icon {
         @apply text-gray-500;
@@ -147,13 +147,13 @@
       @apply xl:w-[350px] xl:h-[350px] w-[650px] h-[650px];
     }
     .footer_note {
-      @apply xl:text-[28px] text-[48px] font-bold;
+      @apply xl:text-[28px] md:text-[26px] lg:text-[25px] sm:text-[24px] text-[48px] font-bold;
     }
     .selected_projects {
-      @apply xl:text-[16px] text-[38px] text-neutral-400 font-bold pb-6 pt-14;
+      @apply xl:text-[16px] md:text-[18px] lg:text-[18px] sm:text-[18px] text-[38px] text-neutral-400 font-bold pb-6 pt-14;
     }
     .projects {
-      @apply flex flex-col gap-2 font-bold xl:text-[14px] text-[36px];
+      @apply flex flex-col gap-2 font-bold xl:text-[14px] md:text-[18px] lg:text-[18px] sm:text-[18px] text-[36px];
     }
   }
 }
