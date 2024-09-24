@@ -18,6 +18,8 @@ import profileAvatar from "../assets/images/3d3.png";
 import workplace from "../assets/images/workplace.png";
 import { useEffect, useRef } from "react";
 import { MdContentCopy } from "react-icons/md";
+import { AiFillLinkedin } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
   const ref = useRef(null);
@@ -164,6 +166,13 @@ export default function Home() {
   const handleCopy = () => {
     navigator.clipboard.writeText("kskavya3661@gmail.com");
   };
+
+  const handleLinkedInNavigate = () => {
+    window.open("https://www.linkedin.com/in/kavya-k-s-74865a296/", "_blank");
+  };
+  const handleGitHubNavigate = () => {
+    window.open("https://github.com/");
+  };
   return (
     <div className={styles.main_container}>
       <Navbar />
@@ -203,14 +212,24 @@ export default function Home() {
             </motion.h1>
           </div>
           <div className={styles.sub_heading}>
-            <motion.p
-              variants={subHeading}
-              initial="hidden"
-              animate="visible"
-              style={{ width: "300px" }}
-            >
-              CURRENTLY DEVELOPING ENGAGING INTERFACES AT QBURST
-            </motion.p>
+            <div>
+              <motion.p
+                variants={subHeading}
+                initial="hidden"
+                animate="visible"
+                className={styles.subHeading}
+              >
+                CURRENTLY DEVELOPING ENGAGING
+              </motion.p>
+              <motion.p
+                variants={subHeading}
+                initial="hidden"
+                animate="visible"
+                className={styles.subHeading}
+              >
+                INTERFACES AT QBURST
+              </motion.p>
+            </div>
             <motion.p variants={subHeading} initial="hidden" animate="visible">
               (2021 – PRESENT)
             </motion.p>
@@ -290,13 +309,7 @@ export default function Home() {
           ))}
         </motion.div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          gap: "60px",
-          flexDirection: "column",
-        }}
-      >
+      <div className={styles.exp}>
         <div className={styles.exp_header}>
           <div className={styles.experience_container}>
             <motion.h1
@@ -328,7 +341,7 @@ export default function Home() {
               whileInView="visible"
             >
               <p className={styles.title}>{experience.company}</p>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div className={styles.details}>
                 <p className={styles.position}>{experience.position}</p>
                 <p className={styles.position}>({experience.duration})</p>
               </div>
@@ -349,15 +362,20 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.footer}>
-        <div style={{ display: "flex", gap: "140px" }}>
-          <div>
+        <div className={styles.footer_div}>
+          <div className={styles.footer_first}>
             <p className={styles.name}>KAVYA K S</p>
             <p className={styles.designation}>
               Senior Developer, currently crafting experiences at QBurst.
             </p>
-            <Image src={avatar} height={350} width={350} />
+            <Image
+              src={avatar}
+              height={350}
+              width={350}
+              className={styles.avatar}
+            />
           </div>
-          <div>
+          <div className={styles.footer_second}>
             <p className={styles.footer_note}>
               Think I’d be a good fit for your team or project?
             </p>
@@ -376,8 +394,32 @@ export default function Home() {
             <div style={{ display: "flex", flexDirection: "column" }}>
               <p className={styles.selected_projects}>SOCIALS</p>
               <div className={styles.projects}>
-                <p>Linkedin</p>
-                <p>GitHub</p>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "12px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => handleLinkedInNavigate()}
+                >
+                  <AiFillLinkedin />
+                  <p>Linkedin</p>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "12px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => handleGitHubNavigate()}
+                >
+                  <FaGithub />
+                  <p>GitHub</p>
+                </div>
               </div>
             </div>
           </div>

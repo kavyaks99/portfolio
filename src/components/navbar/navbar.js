@@ -29,14 +29,14 @@ function Navbar() {
           >
             ABOUT
           </li>
-          <li
+          {/* <li
             className={`${styles.item} ${
               selected === "WORK" ? styles.selected : ""
             }`}
             onClick={() => setSelected("WORK")}
           >
             WORK
-          </li>
+          </li> */}
         </ul>
         <ul className={styles.navbar_right_container}>
           <motion.button
