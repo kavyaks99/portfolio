@@ -382,7 +382,7 @@ export default function Home() {
               Think I’d be a good fit for your team or project?
             </p>
             <p className={styles.footer_note}>Let’s connect.</p>
-            <Toaster position="bottom-right" richColors />
+            <Toaster position="bottom-right" />
             <motion.div
               className={styles.email_div}
               whileTap={{ scale: 0.95 }}

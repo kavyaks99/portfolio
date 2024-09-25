@@ -48,7 +48,7 @@ function Navbar() {
           >
             VIEW RESUME
           </motion.button>
-          <Toaster position="bottom-right" richColors />
+          <Toaster position="bottom-right" />
           <motion.li
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
