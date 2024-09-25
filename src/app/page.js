@@ -161,7 +161,7 @@ export default function Home() {
 
   const handleNavigate = () => {
     window.open(
-      "https://drive.google.com/file/d/1ZLWcUgwmuflqysnFIp1rWBkNSyqiWs_N/view",
+      "https://drive.google.com/file/d/1ZLWcUgwmuflqysnFIp1rWBkNSyqiWs_N/view?usp=sharing",
       "_blank"
     );
   };
