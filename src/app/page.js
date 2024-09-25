@@ -21,6 +21,7 @@ import { MdContentCopy } from "react-icons/md";
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
 import { Toaster, toast } from "sonner";
+import Lenis from "../components/scroll";
 
 export default function Home() {
   const ref = useRef(null);
@@ -176,258 +177,266 @@ export default function Home() {
     window.open("https://github.com/kavyaks99");
   };
   return (
-    <div className={styles.main_container}>
-      <Navbar />
-      <div className={styles.parent}>
-        <motion.div
-          className={styles.header}
-          style={{ opacity: textOpacity, scale: textScale }}
-        >
-          <div className={styles.heading_container}>
-            <motion.h1
-              className={styles.heading}
-              initial="offscreen"
-              animate="onscreen"
-              variants={variants}
-            >
-              SENIOR
-            </motion.h1>
-          </div>
-          <div className={styles.heading_container}>
-            <motion.h1
-              className={styles.heading}
-              initial="offscreen"
-              animate="onscreen"
-              variants={variants}
-            >
-              EXPERIENCE
-            </motion.h1>
-          </div>
-          <div className={styles.heading_container}>
-            <motion.h1
-              className={styles.heading}
-              initial="offscreen"
-              animate="onscreen"
-              variants={variants}
-            >
-              DEVELOPER
-            </motion.h1>
-          </div>
-          <div className={styles.sub_heading}>
-            <div>
+    <Lenis>
+      <div className={styles.main_container}>
+        <Navbar />
+        <div className={styles.parent}>
+          <motion.div
+            className={styles.header}
+            style={{ opacity: textOpacity, scale: textScale }}
+          >
+            <div className={styles.heading_container}>
+              <motion.h1
+                className={styles.heading}
+                initial="offscreen"
+                animate="onscreen"
+                variants={variants}
+              >
+                SENIOR
+              </motion.h1>
+            </div>
+            <div className={styles.heading_container}>
+              <motion.h1
+                className={styles.heading}
+                initial="offscreen"
+                animate="onscreen"
+                variants={variants}
+              >
+                EXPERIENCE
+              </motion.h1>
+            </div>
+            <div className={styles.heading_container}>
+              <motion.h1
+                className={styles.heading}
+                initial="offscreen"
+                animate="onscreen"
+                variants={variants}
+              >
+                DEVELOPER
+              </motion.h1>
+            </div>
+            <div className={styles.sub_heading}>
+              <div>
+                <motion.p
+                  variants={subHeading}
+                  initial="hidden"
+                  animate="visible"
+                  className={styles.subHeading}
+                >
+                  CURRENTLY DEVELOPING ENGAGING
+                </motion.p>
+                <motion.p
+                  variants={subHeading}
+                  initial="hidden"
+                  animate="visible"
+                  className={styles.subHeading}
+                >
+                  INTERFACES AT QBURST
+                </motion.p>
+              </div>
               <motion.p
                 variants={subHeading}
                 initial="hidden"
                 animate="visible"
-                className={styles.subHeading}
               >
-                CURRENTLY DEVELOPING ENGAGING
-              </motion.p>
-              <motion.p
-                variants={subHeading}
-                initial="hidden"
-                animate="visible"
-                className={styles.subHeading}
-              >
-                INTERFACES AT QBURST
+                (2021 – PRESENT)
               </motion.p>
             </div>
-            <motion.p variants={subHeading} initial="hidden" animate="visible">
-              (2021 – PRESENT)
+          </motion.div>
+          <motion.div
+            className={styles.profile_container}
+            style={{ y: imageY, scale: imageScale }}
+            variants={imageVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <Image
+              src={profile}
+              className={styles.profile}
+              width={500}
+              height={500}
+              alt="Picture of the profile"
+            />
+          </motion.div>
+          <div className={styles.des_container}>
+            <motion.p
+              className={styles.description}
+              style={{ opacity: descriptionOpacity }}
+              initial="hidden"
+              whileInView="visible"
+              variants={descriptionVariants}
+            >
+              I love making cool things and solving complex problems for people
+              — like you.
+            </motion.p>
+            <motion.p
+              className={styles.description}
+              style={{ opacity: descriptionTwoOpacity }}
+            >
+              I deliver impactful results through strategic thinking and
+              data-driven insights.
             </motion.p>
           </div>
-        </motion.div>
-        <motion.div
-          className={styles.profile_container}
-          style={{ y: imageY, scale: imageScale }}
-          variants={imageVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <Image
-            src={profile}
-            className={styles.profile}
-            width={500}
-            height={500}
-            alt="Picture of the profile"
-          />
-        </motion.div>
-        <div className={styles.des_container}>
-          <motion.p
-            className={styles.description}
-            style={{ opacity: descriptionOpacity }}
-            initial="hidden"
-            whileInView="visible"
-            variants={descriptionVariants}
+          <motion.div
+            className={styles.work_img_container}
+            style={{ scale: workImageScale }}
           >
-            I love making cool things and solving complex problems for people —
-            like you.
-          </motion.p>
-          <motion.p
-            className={styles.description}
-            style={{ opacity: descriptionTwoOpacity }}
-          >
-            I deliver impactful results through strategic thinking and
-            data-driven insights.
-          </motion.p>
+            <Image
+              src={workplace}
+              className={styles.work_img}
+              width={500}
+              height={500}
+              alt="Picture of the workplace"
+            />
+          </motion.div>
         </div>
-        <motion.div
-          className={styles.work_img_container}
-          style={{ scale: workImageScale }}
-        >
-          <Image
-            src={workplace}
-            className={styles.work_img}
-            width={500}
-            height={500}
-            alt="Picture of the workplace"
-          />
-        </motion.div>
-      </div>
-      <div className={styles.work_container}>
-        <div className={styles.work_heading}>
-          <motion.p
-            className={styles.work}
-            initial="hidden"
-            variants={workTitle}
-            whileInView="visible"
-          >
-            My reliable development methodology
-          </motion.p>
-        </div>
-        <motion.div
-          className={styles.card_container}
-          initial="hidden"
-          viewport={{ once: true }}
-          variants={workTitle}
-          whileInView="visible"
-        >
-          {cardData.map((work) => (
-            <div className={styles.card}>
-              <p className={styles.slno}>{work.number}</p>
-              <p className={styles.title}> {work.title}</p>
-              <p className={styles.work_description}>{work.description}</p>
-            </div>
-          ))}
-        </motion.div>
-      </div>
-      <div className={styles.exp}>
-        <div className={styles.exp_header}>
-          <div className={styles.experience_container}>
-            <motion.h1
-              className={styles.experience}
-              initial="offscreen"
-              whileInView="onscreen"
-              variants={variants}
-            >
-              RELEVANT
-            </motion.h1>
-          </div>
-          <div className={styles.experience_container}>
-            <motion.h1
-              className={styles.experience}
-              initial="offscreen"
-              whileInView="onscreen"
-              variants={variants}
-            >
-              EXPERIENCE
-            </motion.h1>
-          </div>
-        </div>
-        <div className={styles.exp_list}>
-          {experienceList.map((experience) => (
-            <motion.div
-              className={styles.exp_card}
+        <div className={styles.work_container}>
+          <div className={styles.work_heading}>
+            <motion.p
+              className={styles.work}
               initial="hidden"
               variants={workTitle}
               whileInView="visible"
             >
-              <p className={styles.title}>{experience.company}</p>
-              <div className={styles.details}>
-                <p className={styles.position}>{experience.position}</p>
-                <p className={styles.position}>({experience.duration})</p>
-              </div>
-
-              <p className={styles.description_exp}>{experience.description}</p>
-            </motion.div>
-          ))}
-        </div>
-        <div className={styles.button_container}>
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className={styles.resume_btn}
-            onClick={() => handleNavigate()}
-          >
-            VIEW RESUME
-          </motion.button>
-        </div>
-      </div>
-      <div className={styles.footer}>
-        <div className={styles.footer_div}>
-          <div className={styles.footer_first}>
-            <p className={styles.name}>KAVYA K S</p>
-            <p className={styles.designation}>
-              Senior Developer, currently crafting experiences at QBurst.
-            </p>
-            <Image
-              src={avatar}
-              height={350}
-              width={350}
-              className={styles.avatar}
-            />
+              My reliable development methodology
+            </motion.p>
           </div>
-          <div className={styles.footer_second}>
-            <p className={styles.footer_note}>
-              Think I’d be a good fit for your team or project?
-            </p>
-            <p className={styles.footer_note}>Let’s connect.</p>
-            <Toaster position="bottom-right" />
-            <motion.div
-              className={styles.email_div}
+          <motion.div
+            className={styles.card_container}
+            initial="hidden"
+            viewport={{ once: true }}
+            variants={workTitle}
+            whileInView="visible"
+          >
+            {cardData.map((work) => (
+              <div className={styles.card}>
+                <p className={styles.slno}>{work.number}</p>
+                <p className={styles.title}> {work.title}</p>
+                <p className={styles.work_description}>{work.description}</p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+        <div className={styles.exp}>
+          <div className={styles.exp_header}>
+            <div className={styles.experience_container}>
+              <motion.h1
+                className={styles.experience}
+                initial="offscreen"
+                whileInView="onscreen"
+                variants={variants}
+              >
+                RELEVANT
+              </motion.h1>
+            </div>
+            <div className={styles.experience_container}>
+              <motion.h1
+                className={styles.experience}
+                initial="offscreen"
+                whileInView="onscreen"
+                variants={variants}
+              >
+                EXPERIENCE
+              </motion.h1>
+            </div>
+          </div>
+          <div className={styles.exp_list}>
+            {experienceList.map((experience) => (
+              <motion.div
+                className={styles.exp_card}
+                initial="hidden"
+                variants={workTitle}
+                whileInView="visible"
+              >
+                <p className={styles.title}>{experience.company}</p>
+                <div className={styles.details}>
+                  <p className={styles.position}>{experience.position}</p>
+                  <p className={styles.position}>({experience.duration})</p>
+                </div>
+
+                <p className={styles.description_exp}>
+                  {experience.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+          <div className={styles.button_container}>
+            <motion.button
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              onClick={() => handleCopy()}
+              className={styles.resume_btn}
+              onClick={() => handleNavigate()}
             >
-              <div className={styles.email}>
-                kskavya3661@gmail.com
-                <MdContentCopy className={styles.copy_icon} />
-              </div>
-            </motion.div>
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <p className={styles.selected_projects}>SOCIALS</p>
-              <div className={styles.projects}>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    gap: "12px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => handleLinkedInNavigate()}
-                >
-                  <AiFillLinkedin />
-                  <p>Linkedin</p>
+              VIEW RESUME
+            </motion.button>
+          </div>
+        </div>
+        <div className={styles.footer}>
+          <div className={styles.footer_div}>
+            <div className={styles.footer_first}>
+              <p className={styles.name}>KAVYA K S</p>
+              <p className={styles.designation}>
+                Senior Developer, currently crafting experiences at QBurst.
+              </p>
+              <Image
+                src={avatar}
+                height={350}
+                width={350}
+                className={styles.avatar}
+              />
+            </div>
+            <div className={styles.footer_second}>
+              <p className={styles.footer_note}>
+                Think I’d be a good fit for your team or project?
+              </p>
+              <p className={styles.footer_note}>Let’s connect.</p>
+              <Toaster position="bottom-right" />
+              <motion.div
+                className={styles.email_div}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                onClick={() => handleCopy()}
+              >
+                <div className={styles.email}>
+                  kskavya3661@gmail.com
+                  <MdContentCopy className={styles.copy_icon} />
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    gap: "12px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => handleGitHubNavigate()}
-                >
-                  <FaGithub />
-                  <p>GitHub</p>
+              </motion.div>
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p className={styles.selected_projects}>SOCIALS</p>
+                <div className={styles.projects}>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      gap: "12px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => handleLinkedInNavigate()}
+                  >
+                    <AiFillLinkedin />
+                    <p>Linkedin</p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      gap: "12px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => handleGitHubNavigate()}
+                  >
+                    <FaGithub />
+                    <p>GitHub</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Lenis>
   );
 }
