@@ -20,6 +20,7 @@ import { useEffect, useRef } from "react";
 import { MdContentCopy } from "react-icons/md";
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
+import { Toaster, toast } from "sonner";
 
 export default function Home() {
   const ref = useRef(null);
@@ -165,13 +166,14 @@ export default function Home() {
   };
   const handleCopy = () => {
     navigator.clipboard.writeText("kskavya3661@gmail.com");
+    toast.success("Email copied");
   };
 
   const handleLinkedInNavigate = () => {
     window.open("https://www.linkedin.com/in/kavya-k-s-74865a296/", "_blank");
   };
   const handleGitHubNavigate = () => {
-    window.open("https://github.com/");
+    window.open("https://github.com/kavyaks99");
   };
   return (
     <div className={styles.main_container}>
@@ -380,6 +382,7 @@ export default function Home() {
               Think I’d be a good fit for your team or project?
             </p>
             <p className={styles.footer_note}>Let’s connect.</p>
+            <Toaster position="bottom-right" richColors />
             <motion.div
               className={styles.email_div}
               whileTap={{ scale: 0.95 }}

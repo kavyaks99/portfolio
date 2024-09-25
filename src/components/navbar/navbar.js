@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { MdContentCopy } from "react-icons/md";
 import styles from "./navbar.module.scss";
-import { ToastContainer, toast } from "react-toastify";
 import { motion } from "framer-motion";
+import { Toaster, toast } from "sonner";
 
 function Navbar() {
   const [selected, setSelected] = useState("ABOUT");
   const handleCopy = () => {
     navigator.clipboard.writeText("kskavya3661@gmail.com");
+    toast.success("Email copied");
   };
 
   const handleNavigate = () => {
@@ -47,6 +48,7 @@ function Navbar() {
           >
             VIEW RESUME
           </motion.button>
+          <Toaster position="bottom-right" richColors />
           <motion.li
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
