@@ -1,17 +1,17 @@
 .navbar {
-  @apply absolute top-0 left-0  py-5 justify-around flex-row flex font-bold xl:w-[100%] md:w-[100%] lg:w-[100%] pl-5 w-[100vh];
+  @apply absolute top-0 left-0  xl:py-5 md:py-5 lg:py-5 py-12 justify-start xl:justify-around md:justify-around lg:justify-around flex-row flex font-bold xl:w-[100%] md:w-[100%] lg:w-[100%] xl:pl-5 md:pl-5 lg:pl-5 p-12 w-[100vh];
   .selected {
     @apply border-b-2;
   }
   .navbar_left_container {
-    @apply flex gap-10  items-center  flex-row  xl:text-[16px] sm:text-[13px] md:text-[14px] lg:text-[15px];
+    @apply flex gap-10  items-center  flex-row text-[38px] xl:text-[16px] sm:text-[20px] md:text-[20px] lg:text-[20px];
     .item {
-      @apply flex items-center gap-10 cursor-pointer;
+      @apply xl:flex md:flex lg:flex hidden items-center gap-10 cursor-pointer;
       list-style: none;
     }
   }
   .navbar_right_container {
-    @apply flex gap-7  items-center px-10 flex-row  xl:text-[16px] sm:text-[13px] md:text-[14px] lg:text-[15px];
+    @apply xl:flex md:flex lg:flex hidden gap-7  items-center px-10 flex-row  xl:text-[16px] sm:text-[13px] md:text-[14px] lg:text-[15px];
 
     .email {
       @apply bg-white text-black rounded-[25px] p-3 font-semibold flex gap-3 items-center cursor-pointer;
