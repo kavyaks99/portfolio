@@ -13,7 +13,7 @@ function Navbar() {
 
   const handleNavigate = () => {
     window.open(
-      "https://drive.google.com/file/d/1yM8TkjnOez_YGBFrs60XdTqgKIXR8AT_/view?usp=sharing",
+      "https://drive.google.com/file/d/1ZLWcUgwmuflqysnFIp1rWBkNSyqiWs_N/view",
       "_blank"
     );
   };
