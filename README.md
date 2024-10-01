@@ -21,12 +21,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 This portfolio highlights:
 
 Development Methodology: A detailed explanation of my approach to development.
-Relevant Experience: Showcases my skills and past projects.
-Contact Information: Includes links to connect with me.
-Resume: Access to download or view my resume.
-It also includes animations using Leneis Scroll for smooth scrolling and Framer Motion for engaging animations throughout the site.
 
-## Learn More
+Relevant Experience: Showcases my skills and the companies I’ve worked with in the past.
+
+Contact Information: Includes links to connect with me.
+
+Resume: Access to download or view my resume.
+
+It also includes animations using Leneis Scroll for smooth scrolling and Framer Motion for engaging animations throughout the site.
 
 ## Live Website
 
