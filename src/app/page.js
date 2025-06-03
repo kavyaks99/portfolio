@@ -107,44 +107,44 @@ export default function Home() {
     {
       id: 1,
       number: "(01)",
-      title: "Requirements Gathering",
+      title: "Modern React Development",
       description:
-        "The first step is understanding your project needs and technical requirements.",
+        "Expert in React hooks and custom hooks for efficient state management and component logic.",
     },
     {
       id: 2,
       number: "(02)",
-      title: "Architecture Planning",
+      title: "Performance Optimization",
       description:
-        "Next, I'll outline the system architecture to ensure scalability and performance.",
+        "Skilled in code splitting, lazy loading, and implementing best practices for optimal application performance.",
     },
     {
       id: 3,
       number: "(03)",
-      title: "Prototyping",
+      title: "Responsive Design",
       description:
-        "I’ll create prototypes to visualize the user interface and gather feedback on functionality.",
+        "Creating fluid, adaptive interfaces that deliver exceptional user experiences across all devices.",
     },
     {
       id: 4,
       number: "(04)",
-      title: "Development",
+      title: "State Management",
       description:
-        "I’ll start coding the frontend, focusing on responsive design and user experience.",
+        "Proficient in Redux and modern state management solutions for complex applications.",
     },
     {
       id: 5,
       number: "(05)",
-      title: "Testing",
+      title: "Code Architecture",
       description:
-        "Once development is complete, I’ll conduct thorough testing to ensure quality and performance.",
+        "Designing scalable component structures and implementing clean code practices for maintainable applications.",
     },
     {
       id: 6,
       number: "(06)",
-      title: "Deployment",
+      title: "Modern Tools & Practices",
       description:
-        "Finally, I’ll deploy the application and provide documentation and support for a smooth transition.",
+        "Utilizing Next.js, TypeScript, and modern build tools to create scalable, maintainable applications.",
     },
   ];
 
@@ -202,7 +202,7 @@ export default function Home() {
                 animate="onscreen"
                 variants={variants}
               >
-                EXPERIENCE
+                FRONTEND
               </motion.h1>
             </div>
             <div className={styles.heading_container}>
@@ -231,7 +231,7 @@ export default function Home() {
                   animate="visible"
                   className={styles.subHeading}
                 >
-                  INTERFACES AT QBURST
+                  INTERFACES AT QBurst
                 </motion.p>
               </div>
               <motion.p
@@ -266,15 +266,14 @@ export default function Home() {
               whileInView="visible"
               variants={descriptionVariants}
             >
-              I love making cool things and solving complex problems for people
-              — like you.
+              I build modern web applications that are fast, responsive, and
+              easy to use.
             </motion.p>
             <motion.p
               className={styles.description}
               style={{ opacity: descriptionTwoOpacity }}
             >
-              I deliver impactful results through strategic thinking and
-              data-driven insights.
+              Focused on creating clean code and great user experiences.
             </motion.p>
           </div>
           <motion.div
@@ -298,7 +297,7 @@ export default function Home() {
               variants={workTitle}
               whileInView="visible"
             >
-              My reliable development methodology
+              What I Bring to the Table
             </motion.p>
           </div>
           <motion.div
@@ -387,9 +386,9 @@ export default function Home() {
             </div>
             <div className={styles.footer_second}>
               <p className={styles.footer_note}>
-                Think I’d be a good fit for your team or project?
+                Think I'd be a good fit for your team or project?
               </p>
-              <p className={styles.footer_note}>Let’s connect.</p>
+              <p className={styles.footer_note}>Let's connect.</p>
               <Toaster position="bottom-right" />
               <motion.div
                 className={styles.email_div}
